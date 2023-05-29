@@ -87,18 +87,16 @@ export default function AfterSelect({ containerId, value, isClicked }) {
         </TableHead>
 
         {/* Render BackupRefAfter components based on conditions */}
-        {isClicked &&
-          backupToggle &&
-          channelState[containerId]?.totalBoxes?.map((value, index) => {
-            return (
-              <BackupRefAfter
-                channelNo={containerId}
-                id={index}
-                value={value}
-                isClicked={isClicked}
-              />
-            );
-          })}
+        {channelState[containerId]?.totalBoxes?.map((value, index) => {
+          return (
+            <BackupRefAfter
+              channelNo={containerId}
+              id={index}
+              value={value}
+              isClicked={isClicked}
+            />
+          );
+        })}
       </TableContainer>
 
       {/* Second part: Button */}

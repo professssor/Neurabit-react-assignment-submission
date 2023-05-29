@@ -4,7 +4,7 @@ import { MainFunctionState } from "../../States/MainFunctionState";
 
 export default function BackupRefAfter({ channelNo, id, isClicked }) {
   const { channelState } = useContext(MainFunctionState);
-
+  console.log(channelState[channelNo].totalBoxes[id].backupMainValue);
   return (
     <TableBody
       sx={{
@@ -43,7 +43,7 @@ export default function BackupRefAfter({ channelNo, id, isClicked }) {
             }}
           >
             {isClicked
-              ? channelState[channelNo].totalBoxes[id].backupMainValue
+              ? channelState[channelNo]?.totalBoxes[id]?.backupMainValue
               : "Null"}
           </TableCell>
           <TableCell
@@ -53,7 +53,7 @@ export default function BackupRefAfter({ channelNo, id, isClicked }) {
             }}
           >
             {isClicked
-              ? channelState[channelNo].totalBoxes[id].backupRefValue
+              ? channelState[channelNo]?.totalBoxes[id]?.backupRefValue
               : "Null"}
           </TableCell>
         </TableRow>

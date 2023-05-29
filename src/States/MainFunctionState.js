@@ -120,6 +120,7 @@ export default function MainFunctionStateProvider({ children }) {
 
     setChannelState(updatedChannelState);
   };
+  console.log(channelState);
 
   // Handle backup click
   const handleBackupClick = (key) => {
@@ -131,10 +132,10 @@ export default function MainFunctionStateProvider({ children }) {
           const updatedChannel = {
             ...channel,
             isClicked: true,
-            totalBoxes:
-              channel.totalBoxes.length === 0
-                ? [{ main: 0 }]
-                : channel.totalBoxes,
+            totalBoxes: [{ main: 0 }],
+            // channel.totalBoxes.length === 0
+            //   ? [{ main: 0 }]
+            //   : channel.totalBoxes,
           };
           return updatedChannel;
         }
