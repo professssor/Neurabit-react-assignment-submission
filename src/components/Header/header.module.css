@@ -1,0 +1,20 @@
+.headerContainer {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem;
+  color: #022539;
+  margin-right: 0.6rem;
+}
+
+.profile > * {
+  margin: 0 0.3rem;
+}

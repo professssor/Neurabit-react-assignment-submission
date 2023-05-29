@@ -1,0 +1,23 @@
+.container {
+  padding: 1rem;
+  background-color: white;
+  width: 90%;
+  border-radius: 0.5rem;
+
+  /* Sticky positioning */
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  /* Flexbox properties */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid #e1e5ea;
+}
+
+.container > * {
+  justify-content: center;
+  align-items: end;
+
+  width: 70%;
+}
